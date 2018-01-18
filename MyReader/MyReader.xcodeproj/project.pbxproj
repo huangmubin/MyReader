@@ -47,6 +47,8 @@
 		9CB5589A200E37BA0078AEDE /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB55899200E37BA0078AEDE /* UserDefault.swift */; };
 		9CB5589D200E3A710078AEDE /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5589C200E3A710078AEDE /* TouchView.swift */; };
 		9CB5589F200E42F50078AEDE /* TextReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5589E200E42F50078AEDE /* TextReader.swift */; };
+		9CB558A1200F94860078AEDE /* Ex_UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB558A0200F94860078AEDE /* Ex_UITextView.swift */; };
+		9CB558A3200F963C0078AEDE /* Ex_UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB558A2200F963C0078AEDE /* Ex_UIScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,8 @@
 		9CB55899200E37BA0078AEDE /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		9CB5589C200E3A710078AEDE /* TouchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchView.swift; sourceTree = "<group>"; };
 		9CB5589E200E42F50078AEDE /* TextReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextReader.swift; sourceTree = "<group>"; };
+		9CB558A0200F94860078AEDE /* Ex_UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex_UITextView.swift; sourceTree = "<group>"; };
+		9CB558A2200F963C0078AEDE /* Ex_UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex_UIScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,8 @@
 				9CB55853200E30FB0078AEDE /* Ex_UIColor.swift */,
 				9CB55854200E30FB0078AEDE /* Ex_View.swift */,
 				9CB55855200E30FB0078AEDE /* Ex_DispatchQueue.swift */,
+				9CB558A0200F94860078AEDE /* Ex_UITextView.swift */,
+				9CB558A2200F963C0078AEDE /* Ex_UIScrollView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -387,9 +393,11 @@
 				9CB55876200E30FB0078AEDE /* Ex_Int.swift in Sources */,
 				9CB5588D200E30FB0078AEDE /* TipsView_Background.swift in Sources */,
 				9CB55882200E30FB0078AEDE /* Algorithms.swift in Sources */,
+				9CB558A3200F963C0078AEDE /* Ex_UIScrollView.swift in Sources */,
 				9CB5587C200E30FB0078AEDE /* Ex_UIColor.swift in Sources */,
 				9CB55832200E2FB60078AEDE /* AppDelegate.swift in Sources */,
 				9CB55886200E30FB0078AEDE /* NavigationController.swift in Sources */,
+				9CB558A1200F94860078AEDE /* Ex_UITextView.swift in Sources */,
 				9CB55888200E30FB0078AEDE /* QueueProtocol.swift in Sources */,
 				9CB55878200E30FB0078AEDE /* Ex_String.swift in Sources */,
 				9CB55880200E30FB0078AEDE /* ImageView.swift in Sources */,

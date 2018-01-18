@@ -12,8 +12,12 @@ class ReaderController: ViewController {
 
     @IBOutlet weak var text_view: UITextView!
     
+    // MARK: - View Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let range = NSRange(location: 100, length: 30)
+        print("up = \(range.upperBound); \(range.lowerBound)")
         
         // Data
         let path = Bundle.main.path(forResource: "test", ofType: "txt")!
@@ -28,7 +32,7 @@ class ReaderController: ViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        read.load(text: text_view.text)
+        
     }
     
     // MARK: - Read
@@ -58,7 +62,7 @@ class ReaderController: ViewController {
     // MARK: - Tap Action
     
     @IBAction func text_view_tap_action(_ sender: UITapGestureRecognizer) {
-        if bottom_control_layout.constant == 0 {
+        if bottom_control_layout.constant < 0 {
             layout_animation(show: false)
         } else {
             let touch = sender.location(in: view)
@@ -97,9 +101,28 @@ class ReaderController: ViewController {
     
     func layout_animation(show: Bool) {
         UIView.animate(withDuration: 0.25, animations: {
-            self.bottom_control_layout.constant = show ? 0 : 200
+            self.bottom_control_layout.constant = show ? -4 : 200
             self.view.layoutIfNeeded()
         })
+    }
+    
+    // MARK: - Menus
+    
+    @IBAction func menu_action(_ sender: UIButton) {
+    }
+    
+    @IBAction func auto_action(_ sender: UIButton) {
+    }
+    
+    @IBAction func play_action(_ sender: UIButton) {
+        let start = text_view.closestPosition(to: text_view.contentOffset)!
+        let end = text_view.closestPosition(to: CGPoint(x: text_view.contentOffset.x + text_view.bounds.width, y: text_view.contentOffset.y + text_view.bounds.height))!
+        let start_local = text_view.offset(from: text_view.beginningOfDocument, to: start)
+        let length = text_view.offset(from: start, to: end)
+        print(NSRange(location: start_local, length: length))
+        print(text_view.characterRange(at: text_view.contentOffset))
+        print(text_view.text(in: text_view.textRange(from: start, to: end)!))
+        print(text_view.text[start_local ..< (start_local + length)])
     }
     
 

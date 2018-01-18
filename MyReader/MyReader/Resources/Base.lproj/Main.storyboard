@@ -29,26 +29,19 @@
                                 </connections>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXH-St-byO" customClass="View" customModule="MyReader" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <rect key="frame" x="4" y="677" width="367" height="190"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17a-oJ-X3K">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="Ghc-WT-Wxs"/>
-                                        </constraints>
-                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcl-n2-mKg" customClass="Button" customModule="MyReader" customModuleProvider="target">
-                                        <rect key="frame" x="207.5" y="17" width="147.5" height="40"/>
+                                        <rect key="frame" x="203.5" y="16" width="143.5" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Jzb-aj-Gl4"/>
+                                            <constraint firstAttribute="height" constant="30" id="Jzb-aj-Gl4"/>
                                         </constraints>
                                         <state key="normal" title="A+">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="corner">
-                                                <real key="value" value="20"/>
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,16 +55,16 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yC-aG-LB9" customClass="Button" customModule="MyReader" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="17" width="147.5" height="40"/>
+                                        <rect key="frame" x="20" y="16" width="143.5" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="GbF-zQ-wYD"/>
+                                            <constraint firstAttribute="height" constant="30" id="GbF-zQ-wYD"/>
                                         </constraints>
                                         <state key="normal" title="A-">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="corner">
-                                                <real key="value" value="20"/>
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,11 +78,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Tm-Lu-s4X" customClass="Button" customModule="MyReader" customModuleProvider="target">
-                                        <rect key="frame" x="22" y="72" width="50" height="50"/>
+                                        <rect key="frame" x="48" y="62" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="SCV-kU-dfn"/>
                                             <constraint firstAttribute="height" constant="50" id="s2q-mk-Ag9"/>
                                         </constraints>
+                                        <state key="normal" title="白"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="corner">
                                                 <real key="value" value="25"/>
@@ -109,11 +103,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jka-fP-rmW" customClass="Button" customModule="MyReader" customModuleProvider="target">
-                                        <rect key="frame" x="115.5" y="71.5" width="50" height="50"/>
+                                        <rect key="frame" x="158.5" y="61.5" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="dsN-kl-jNk"/>
                                             <constraint firstAttribute="width" constant="50" id="xaf-EH-p8Z"/>
                                         </constraints>
+                                        <state key="normal" title="绿"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="corner">
                                                 <real key="value" value="25"/>
@@ -133,11 +128,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1px-Gl-CYi" customClass="Button" customModule="MyReader" customModuleProvider="target">
-                                        <rect key="frame" x="209.5" y="71.5" width="50" height="50"/>
+                                        <rect key="frame" x="269" y="61.5" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Wue-rq-p9Y"/>
                                             <constraint firstAttribute="height" constant="50" id="moA-YB-SZ3"/>
                                         </constraints>
+                                        <state key="normal" title="黑"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="corner">
                                                 <real key="value" value="25"/>
@@ -156,58 +152,76 @@
                                             <action selector="color_change_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ULf-N6-7cL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmj-mc-xNv" customClass="Button" customModule="MyReader" customModuleProvider="target">
-                                        <rect key="frame" x="303" y="71.5" width="50" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOv-Ff-8Xl">
+                                        <rect key="frame" x="158.5" y="128" width="50" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="1h2-Th-BMU"/>
-                                            <constraint firstAttribute="width" constant="50" id="43C-nO-4Zq"/>
+                                            <constraint firstAttribute="height" constant="50" id="1hL-rj-hW6"/>
+                                            <constraint firstAttribute="width" constant="50" id="lbs-DT-DKw"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="corner">
-                                                <real key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="background_color">
-                                                <color key="value" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <state key="normal" title="自动"/>
                                         <connections>
-                                            <action selector="color_change_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1nu-TS-Tx3"/>
+                                            <action selector="auto_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jld-1M-Xjr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aT-IL-sHv">
-                                        <rect key="frame" x="293" y="150" width="62" height="30"/>
-                                        <state key="normal" title="语音播放"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQB-Rp-OfU">
+                                        <rect key="frame" x="269.5" y="128" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="8Us-Go-AkU"/>
+                                            <constraint firstAttribute="height" constant="50" id="Eno-o4-dJR"/>
+                                        </constraints>
+                                        <state key="normal" title="播放"/>
+                                        <connections>
+                                            <action selector="play_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xiw-RY-gcx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tr-Fo-EwJ">
+                                        <rect key="frame" x="48" y="128" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="SIl-k1-1Ox"/>
+                                            <constraint firstAttribute="height" constant="50" id="eAv-dg-yDx"/>
+                                        </constraints>
+                                        <state key="normal" title="目录"/>
+                                        <connections>
+                                            <action selector="menu_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p79-R6-b5A"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="17a-oJ-X3K" firstAttribute="top" secondItem="gXH-St-byO" secondAttribute="top" id="1l2-Kn-dNq"/>
+                                    <constraint firstItem="wQB-Rp-OfU" firstAttribute="centerX" secondItem="1px-Gl-CYi" secondAttribute="centerX" id="15y-Ni-ApN"/>
                                     <constraint firstItem="Hcl-n2-mKg" firstAttribute="leading" secondItem="8yC-aG-LB9" secondAttribute="trailing" constant="40" id="2Wc-ca-sKT"/>
-                                    <constraint firstItem="Hcl-n2-mKg" firstAttribute="top" secondItem="17a-oJ-X3K" secondAttribute="bottom" constant="16" id="3nm-wI-zW8"/>
-                                    <constraint firstAttribute="trailing" secondItem="8aT-IL-sHv" secondAttribute="trailing" constant="20" id="5he-YH-P75"/>
+                                    <constraint firstItem="BOv-Ff-8Xl" firstAttribute="centerY" secondItem="6tr-Fo-EwJ" secondAttribute="centerY" id="4B2-If-AHG"/>
                                     <constraint firstAttribute="trailing" secondItem="Hcl-n2-mKg" secondAttribute="trailing" constant="20" id="72W-u6-pUn"/>
-                                    <constraint firstItem="Jka-fP-rmW" firstAttribute="centerX" secondItem="gXH-St-byO" secondAttribute="centerX" multiplier="0.75" id="8Pn-Ah-B9T"/>
-                                    <constraint firstItem="4Tm-Lu-s4X" firstAttribute="top" secondItem="8yC-aG-LB9" secondAttribute="bottom" constant="15" id="FRz-O6-dxv"/>
-                                    <constraint firstAttribute="height" constant="200" id="I16-Z8-1wZ"/>
-                                    <constraint firstItem="Vmj-mc-xNv" firstAttribute="centerX" secondItem="gXH-St-byO" secondAttribute="centerX" multiplier="1.75" id="RTz-Ts-2Tz"/>
-                                    <constraint firstItem="Vmj-mc-xNv" firstAttribute="centerY" secondItem="4Tm-Lu-s4X" secondAttribute="centerY" id="ZhJ-Dg-HzT"/>
-                                    <constraint firstItem="4Tm-Lu-s4X" firstAttribute="centerX" secondItem="gXH-St-byO" secondAttribute="centerX" multiplier="0.25" id="ehq-6Y-jMX"/>
-                                    <constraint firstItem="1px-Gl-CYi" firstAttribute="centerX" secondItem="gXH-St-byO" secondAttribute="centerX" multiplier="1.25" id="ezh-Dx-0Cj"/>
+                                    <constraint firstItem="Jka-fP-rmW" firstAttribute="centerX" secondItem="gXH-St-byO" secondAttribute="centerX" id="8Pn-Ah-B9T"/>
+                                    <constraint firstItem="Hcl-n2-mKg" firstAttribute="centerY" secondItem="8yC-aG-LB9" secondAttribute="centerY" id="Esj-5u-ARf"/>
+                                    <constraint firstItem="4Tm-Lu-s4X" firstAttribute="top" secondItem="8yC-aG-LB9" secondAttribute="bottom" constant="16" id="FRz-O6-dxv"/>
+                                    <constraint firstAttribute="height" constant="190" id="I16-Z8-1wZ"/>
+                                    <constraint firstItem="wQB-Rp-OfU" firstAttribute="centerY" secondItem="6tr-Fo-EwJ" secondAttribute="centerY" id="PXG-sz-KHZ"/>
+                                    <constraint firstItem="6tr-Fo-EwJ" firstAttribute="centerX" secondItem="4Tm-Lu-s4X" secondAttribute="centerX" id="YYh-LF-3qV"/>
+                                    <constraint firstItem="6tr-Fo-EwJ" firstAttribute="top" secondItem="4Tm-Lu-s4X" secondAttribute="bottom" constant="16" id="bAT-R9-mzB"/>
+                                    <constraint firstItem="4Tm-Lu-s4X" firstAttribute="centerX" secondItem="gXH-St-byO" secondAttribute="centerX" multiplier="0.4" id="ehq-6Y-jMX"/>
+                                    <constraint firstItem="1px-Gl-CYi" firstAttribute="centerX" secondItem="gXH-St-byO" secondAttribute="centerX" multiplier="1.6" id="ezh-Dx-0Cj"/>
                                     <constraint firstItem="8yC-aG-LB9" firstAttribute="leading" secondItem="gXH-St-byO" secondAttribute="leading" constant="20" id="gC0-zz-jxs"/>
-                                    <constraint firstAttribute="trailing" secondItem="17a-oJ-X3K" secondAttribute="trailing" id="pE3-GG-KPG"/>
+                                    <constraint firstItem="BOv-Ff-8Xl" firstAttribute="centerX" secondItem="Jka-fP-rmW" secondAttribute="centerX" id="j5h-1R-nzd"/>
+                                    <constraint firstItem="8yC-aG-LB9" firstAttribute="top" secondItem="gXH-St-byO" secondAttribute="top" constant="16" id="lOO-Wh-dIc"/>
                                     <constraint firstItem="8yC-aG-LB9" firstAttribute="width" secondItem="Hcl-n2-mKg" secondAttribute="width" id="pwA-AW-mMi"/>
-                                    <constraint firstItem="8yC-aG-LB9" firstAttribute="top" secondItem="17a-oJ-X3K" secondAttribute="bottom" constant="16" id="rCF-9c-jfM"/>
                                     <constraint firstItem="1px-Gl-CYi" firstAttribute="centerY" secondItem="4Tm-Lu-s4X" secondAttribute="centerY" id="tRM-N3-h86"/>
-                                    <constraint firstItem="17a-oJ-X3K" firstAttribute="leading" secondItem="gXH-St-byO" secondAttribute="leading" id="v4R-hI-bl5"/>
-                                    <constraint firstAttribute="bottom" secondItem="8aT-IL-sHv" secondAttribute="bottom" constant="20" id="xOP-mI-qDd"/>
                                     <constraint firstItem="Jka-fP-rmW" firstAttribute="centerY" secondItem="4Tm-Lu-s4X" secondAttribute="centerY" id="z1x-RB-miI"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="opacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="offset">
+                                        <point key="value" x="0.0" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -215,14 +229,15 @@
                         <constraints>
                             <constraint firstItem="LTw-hD-vRo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="H6n-kB-qqN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LTw-hD-vRo" secondAttribute="trailing" id="PVs-i9-NPr"/>
-                            <constraint firstItem="gXH-St-byO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yol-Sh-bde"/>
+                            <constraint firstItem="gXH-St-byO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="Yol-Sh-bde"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LTw-hD-vRo" secondAttribute="bottom" id="anF-2D-k09"/>
                             <constraint firstItem="LTw-hD-vRo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cUk-b0-sew"/>
-                            <constraint firstItem="gXH-St-byO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hmX-Ar-Y4r"/>
-                            <constraint firstItem="gXH-St-byO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rGV-WC-K1h"/>
+                            <constraint firstItem="gXH-St-byO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-4" id="hmX-Ar-Y4r"/>
+                            <constraint firstItem="gXH-St-byO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="200" id="rGV-WC-K1h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="iRC-b9-39q"/>
                     <connections>
                         <outlet property="bottom_control_layout" destination="rGV-WC-K1h" id="P3Y-HK-vVc"/>
                         <outlet property="text_view" destination="LTw-hD-vRo" id="fJJ-e3-1h3"/>
@@ -235,7 +250,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="29.23538230884558"/>
+            <point key="canvasLocation" x="364" y="29.23538230884558"/>
         </scene>
     </scenes>
 </document>
