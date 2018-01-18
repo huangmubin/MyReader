@@ -20,7 +20,7 @@ class ReaderController: ViewController {
         print("up = \(range.upperBound); \(range.lowerBound)")
         
         // Data
-        let path = Bundle.main.path(forResource: "test", ofType: "txt")!
+        let path = Bundle.main.path(forResource: "Test", ofType: "md")!
         let data = try! String(contentsOfFile: path, encoding: .utf8)
         text_view.text = data
         
@@ -115,15 +115,31 @@ class ReaderController: ViewController {
     }
     
     @IBAction func play_action(_ sender: UIButton) {
-        let start = text_view.closestPosition(to: text_view.contentOffset)!
-        let end = text_view.closestPosition(to: CGPoint(x: text_view.contentOffset.x + text_view.bounds.width, y: text_view.contentOffset.y + text_view.bounds.height))!
-        let start_local = text_view.offset(from: text_view.beginningOfDocument, to: start)
-        let length = text_view.offset(from: start, to: end)
-        print(NSRange(location: start_local, length: length))
-        print(text_view.characterRange(at: text_view.contentOffset))
-        print(text_view.text(in: text_view.textRange(from: start, to: end)!))
-        print(text_view.text[start_local ..< (start_local + length)])
+        
     }
+    
+    // MARK: - Reader
+    
+    let reader = Reader()
+    
+    func reader_deploy_invisible() {
+        let visible_start = text_view.visible_text_range().lowerBound
+        if var text = text_view.text {
+            if reader.text_start == nil {
+                reader.text_start = text.index(visible_start)
+            }
+            while reader.texts.count < 10 {
+                if let index = Book.segment(text: text) {
+                    reader.texts.append(String(text[text.startIndex ..< index]))
+                    reader.text_ended = index
+                    text.removeSubrange(text.startIndex ..< index)
+                } else {
+                    break
+                }
+            }
+        }
+    }
+    
     
 
 }
