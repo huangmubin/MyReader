@@ -6,7 +6,7 @@
 //  Copyright © 2018年 myron. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import AVFoundation
 
 class Reader: NSObject, AVSpeechSynthesizerDelegate {
@@ -24,32 +24,65 @@ class Reader: NSObject, AVSpeechSynthesizerDelegate {
     }
     
     
-    // MARK: - Values
+    // MARK: - Texts
+    
+    /** text view */
+    weak var view: UITextView?
     
     /** texts */
     var texts: [String] = []
-    /** Texts Range */
-    var text_start: String.Index?
-    var text_ended: String.Index?
+    /** texts's start index */
+    var start: String.Index!
+    /** texts's end index */
+    var ended: String.Index!
     
-    func reset_texts(_ value: String, start: String.Index) {
-        texts.removeAll()
-        text_start = start
-        var text = value
-        text.removeSubrange(text.startIndex ..< start)
-        while texts.count < 10 {
-            if let index = Book.segment(text: text) {
-                texts.append(String(text[text.startIndex ..< index]))
-                text_ended = index
-                text.removeSubrange(text.startIndex ..< index)
-            } else {
-                break
+    // MARK: Text action
+    
+    /** reset the visible texts */
+    func text_reset() {
+        texts.removeAll(keepingCapacity: true)
+        guard let book = view?.text else { return }
+        guard let range = view?.visible_range() else { return }
+        
+        ended = book.endIndex
+        start = range.lowerBound
+        for (index, char) in String(book[start ..< ended]).enumerated() {
+            if ["。", "？", "！", "：", "；", "\n"].contains(char) {
+                ended = book.index(book.startIndex, offsetBy: index + 1 + book.distance(from: book.startIndex, to: start))
+                var text = String(book[start ..< ended])
+                while text.first == "\n" {
+                    text.removeFirst()
+                }
+                if !text.isEmpty {
+                    texts.append(text)
+                    if texts.count >= 10 { break }
+                }
+                start = ended
             }
         }
+        start = range.lowerBound
     }
     
-    func append_texts(_ value: String) {
+    /** text */
+    func text_update() {
+        if texts.count >= 10 { return }
+        guard let book = view?.text else { return }
+        guard var start = self.ended else { return }
         
+        for (index, char) in String(book[start ..< book.endIndex]).enumerated() {
+            if ["。", "？", "！", "：", "；", "\n"].contains(char) {
+                ended = book.index(book.startIndex, offsetBy: index + 1 + book.distance(from: book.startIndex, to: start))
+                var text = String(book[start ..< ended])
+                while text.first == "\n" {
+                    text.removeFirst()
+                }
+                if !text.isEmpty {
+                    texts.append(text)
+                    if texts.count >= 10 { break }
+                }
+                start = ended
+            }
+        }
     }
     
     // MARK: - Property
@@ -79,6 +112,7 @@ class Reader: NSObject, AVSpeechSynthesizerDelegate {
         utterance.rate = rate
         utterance.pitchMultiplier = pitchMultiplier
         utterance.postUtteranceDelay = postUtteranceDelay
+        utterance.voice = AVSpeechSynthesisVoice(language: "zh-CN")
         current = utterance
         player.speak(utterance)
     }
@@ -101,6 +135,12 @@ class Reader: NSObject, AVSpeechSynthesizerDelegate {
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
         print("speechSynthesizer didFinish \(utterance.speechString)")
+        if texts.count < 4 {
+            text_update()
+        }
+        if texts.count > 0 {
+            play_deploy(text: texts.removeFirst())
+        }
     }
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didPause utterance: AVSpeechUtterance) {

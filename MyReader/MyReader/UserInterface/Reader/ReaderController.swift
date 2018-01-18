@@ -21,6 +21,7 @@ class ReaderController: ViewController {
         
         // Data
         let path = Bundle.main.path(forResource: "Test", ofType: "md")!
+        
         let data = try! String(contentsOfFile: path, encoding: .utf8)
         text_view.text = data
         
@@ -32,12 +33,8 @@ class ReaderController: ViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        reader.view = text_view
     }
-    
-    // MARK: - Read
-    
-    var read = TextReader()
     
     // MARK: - Font
     
@@ -115,30 +112,15 @@ class ReaderController: ViewController {
     }
     
     @IBAction func play_action(_ sender: UIButton) {
-        
+        reader.text_reset()
+        print(reader.texts)
+        reader.play()
     }
     
     // MARK: - Reader
     
     let reader = Reader()
     
-    func reader_deploy_invisible() {
-        let visible_start = text_view.visible_text_range().lowerBound
-        if var text = text_view.text {
-            if reader.text_start == nil {
-                reader.text_start = text.index(visible_start)
-            }
-            while reader.texts.count < 10 {
-                if let index = Book.segment(text: text) {
-                    reader.texts.append(String(text[text.startIndex ..< index]))
-                    reader.text_ended = index
-                    text.removeSubrange(text.startIndex ..< index)
-                } else {
-                    break
-                }
-            }
-        }
-    }
     
     
 

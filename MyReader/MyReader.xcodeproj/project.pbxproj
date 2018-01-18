@@ -51,6 +51,7 @@
 		9CB5589A200E37BA0078AEDE /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB55899200E37BA0078AEDE /* UserDefault.swift */; };
 		9CB5589D200E3A710078AEDE /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5589C200E3A710078AEDE /* TouchView.swift */; };
 		9CB5589F200E42F50078AEDE /* TextReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5589E200E42F50078AEDE /* TextReader.swift */; };
+		9CB558A42010BA910078AEDE /* Test.md in Resources */ = {isa = PBXBuildFile; fileRef = 9CB143A820107F18007DD27E /* Test.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -382,6 +383,7 @@
 			files = (
 				9CB5583C200E2FB60078AEDE /* LaunchScreen.storyboard in Resources */,
 				9CB55839200E2FB60078AEDE /* Assets.xcassets in Resources */,
+				9CB558A42010BA910078AEDE /* Test.md in Resources */,
 				9CB55837200E2FB60078AEDE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
