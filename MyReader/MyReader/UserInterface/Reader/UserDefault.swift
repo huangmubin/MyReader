@@ -29,10 +29,9 @@ class User {
     }
     static var color_background: UIColor {
         switch color_number {
-        case 0: return UIColor(255,255,255)
-        case 1: return UIColor(199,237,204)
-        case 2: return UIColor(180,180,180)
-        case 3: return UIColor(30,30,30)
+        case 0: return UIColor(199,237,204)
+        case 1: return UIColor(180,180,180)
+        case 2: return UIColor(30,30,30)
         default: return UIColor(255,255,255)
         }
     }
@@ -40,9 +39,23 @@ class User {
         switch color_number {
         case 0: return UIColor(30,30,30)
         case 1: return UIColor(30,30,30)
-        case 2: return UIColor(30,30,30)
-        case 3: return UIColor(220,220,220)
+        case 2: return UIColor(220,220,220)
         default: return UIColor(30,30,30)
         }
     }
+    
+    static var auto_scroll_speed: CGFloat {
+        set { UserDefaults.standard.set(newValue, forKey: "User.auto_scroll_speed") }
+        get { return (UserDefaults.standard.object(forKey: "User.auto_scroll_speed") as? CGFloat) ?? 1 }
+    }
+    static var auto_read_speed: Float {
+        set { UserDefaults.standard.set(newValue, forKey: "User.auto_read_speed") }
+        get { return UserDefaults.standard.float(forKey: "User.auto_read_speed") }
+    }
+    
+    static var scroll: Int {
+        set { UserDefaults.standard.set(newValue, forKey: "User.auto_read_speed.scroll") }
+        get { return UserDefaults.standard.integer(forKey: "User.auto_read_speed.scroll") }
+    }
+    
 }
