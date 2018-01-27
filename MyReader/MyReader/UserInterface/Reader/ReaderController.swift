@@ -37,33 +37,24 @@ class ReaderController: ViewController, UITextViewDelegate {
         autor.speed = User.auto_scroll_speed
         reader.rate = User.auto_read_speed
         
-        
         self.bookView.delegate = self
+        
+        if let position = self.bookView.position(from: self.bookView.beginningOfDocument, offset: User.scroll) {
+            let rect = self.bookView.caretRect(for: position)
+            DispatchQueue.global().async {
+                while self.bookView.contentOffset.y != rect.origin.y {
+                    DispatchQueue.main.async {
+                        self.bookView.setContentOffset(CGPoint(x: 0, y: rect.origin.y), animated: true)
+                    }
+                    Thread.sleep(forTimeInterval: 0.2)
+                    print("rect = \(rect.origin.y); offset = \(self.bookView.contentOffset.y); user = \(User.scroll)")
+                }
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        DispatchQueue.main.async {
-            self.bookView.layoutSubviews()
-            self.bookView.layoutIfNeeded()
-            self.bookView.setNeedsDisplay()
-            if let position = self.bookView.position(from: self.bookView.beginningOfDocument, offset: User.scroll) {
-                let rect = self.bookView.caretRect(for: position)
-                print("\(self.bookView.contentSize) rect = \(rect) y = \(rect.origin.y); \(User.scroll)")
-                self.bookView.setContentOffset(CGPoint(x: 0, y: rect.origin.y), animated: true)
-            }
-        }
-        
-//        DispatchQueue.main.async {
-//            if let position = self.bookView.position(from: self.bookView.beginningOfDocument, offset: User.scroll) {
-//                let rect = self.bookView.caretRect(for: position)
-//                print("\(self.bookView.contentSize) rect = \(rect); \(User.scroll)")
-//                //self.bookView.contentOffset.y = rect.origin.y
-//                self.bookView.setContentOffset(rect.origin, animated: true)
-//                DispatchQueue.main.async {
-//                }
-//            }
-//        }
     }
     
     // MARK: - Data
